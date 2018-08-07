@@ -3,7 +3,7 @@ import './ShelfList.css'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/shelfie-logo.png'
 
-export default class AllShelves extends Component {
+export default class ShelfList extends Component {
   render() {
     return (
       <div className='shelf-page'>
