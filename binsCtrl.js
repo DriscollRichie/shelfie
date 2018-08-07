@@ -22,5 +22,17 @@ module.exports = {
       res.status(500).send(err)
       console.error('getBinDetails failed in binsCtrl.js:', err)
     }
+  },
+
+  editProductDetails: async (req, res) => {
+    try {
+      const db = req.app.get('db')
+      const {product_id} = req.params
+      const {product_name, product_price, product_image} = req.body
+      const [editedProduct] = await db.edit_bin_details({product_name, product_price, product_image, product_id})
+      res.status(200).send(editedProduct)
+    } catch(err) {
+      res.status(500).send(console.error('editProductDetails failed in binsCtrl.js:', err))
+    }
   }
 }

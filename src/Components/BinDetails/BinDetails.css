@@ -73,8 +73,9 @@
   font-size: 35px;
   font-weight: 800;
   color: black;
-  padding-left: 10px;
+  padding-left: 5px;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .bin-input:focus:read-write {
@@ -120,4 +121,45 @@ button,input:focus {
   position: relative;
   right: 50px;
   height: auto;
+}
+
+#dollar-sign {
+  position: absolute;
+  font-size: 35px;
+  top: 29px;
+  left: 7px;
+}
+
+#price-details {
+  position: relative;
+}
+
+#bin-input:focus:read-write + #dollar-sign {
+  top: 33px;
+  left: 10px;
+}
+
+.bin-input-price {
+  height: 70px;
+  width: 500px;
+  background-color: white;
+  border-style: solid;
+  border-color: #ED6B5A;
+  border-width: 1.3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-family: 'Open Sans';
+  font-size: 35px;
+  font-weight: 800;
+  color: black;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.bin-input-price:focus:read-write {
+  border: 5px solid #AB2A19;
 }

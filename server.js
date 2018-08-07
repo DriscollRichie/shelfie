@@ -2,15 +2,17 @@ require('dotenv').config();
 const express = require("express");
 const massive = require("massive");
 const bodyParser = require("body-parser");
-const binCtrl = require('./binsCtrl')
+const binsCtrl = require('./binsCtrl')
 
 const app = express();
 app.use(bodyParser.json());
 
 let { CONNECTION_STRING, SERVER_PORT } = process.env
 
-app.get('/api/bins/:shelf', binCtrl.getBins)
-app.get('/api/:shelf/:bin/details', binCtrl.getBinDetails)
+app.get('/api/bins/:shelf', binsCtrl.getBins)
+app.get('/api/:shelf/:bin/details', binsCtrl.getBinDetails)
+
+app.patch('/api/product/:product_id', binsCtrl.editProductDetails)
 
 async function startServer() {
   try {

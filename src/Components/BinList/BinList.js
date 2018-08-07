@@ -13,7 +13,6 @@ export default class BinList extends Component {
   componentDidMount = async () => {
     try {
       const { data: bins } = await axios.get(`/api/bins/${this.props.match.params.shelf}`)
-      console.log(bins)
       this.setState({ bins })
     } catch (err) {
       console.error('componentDidMount failed in BinList.js:', err)
