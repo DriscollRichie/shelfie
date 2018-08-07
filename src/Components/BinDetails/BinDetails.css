@@ -1,0 +1,123 @@
+#bin-details-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#bin-nav-bar {
+  height: 70px;
+  width: 100vw;
+  background-color: #ED6B5A;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#bin-nav-bar-left {
+  width: 385px;
+  height: 100%;
+  background-color: #AB2A19;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#bin-nav-bar-mid {
+  height: 100%;
+  width: 200px;
+  background-color: #D34735;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#bin-nav-bar-mid-text {
+  position: relative;
+  left: 10px;
+}
+
+#bin-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+#bin-details-mid {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans';
+  font-weight: 800;
+}
+
+.bin-input {
+  height: 70px;
+  width: 500px;
+  background-color: white;
+  border-style: solid;
+  border-color: #ED6B5A;
+  border-width: 1.3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-family: 'Open Sans';
+  font-size: 35px;
+  font-weight: 800;
+  color: black;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.bin-input:focus:read-write {
+  border: 5px solid #AB2A19;
+}
+
+.bin-input-type {
+  position: relative;
+  left: 25px; 
+}
+
+button,input:focus {
+  outline:0;
+}
+
+.bin-button {
+  border-radius: 10px;
+  background-color: #D8D8D8;
+  height: 70px;
+  width: 210px;
+  font-family: 'Open Sans';
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.bin-button-save {     
+  background-color:#40F99B;
+  border-radius: 50px;
+  height: 70px;
+  width: 210px;
+  font-family: 'Open Sans';
+  font-size: 35px;
+  font-weight: 700;   
+}
+
+#bin-controls {
+  width: 515px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#product-image {
+  position: relative;
+  right: 50px;
+  height: auto;
+}

@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 let { CONNECTION_STRING, SERVER_PORT } = process.env
 
 app.get('/api/bins/:shelf', binCtrl.getBins)
+app.get('/api/:shelf/:bin/details', binCtrl.getBinDetails)
 
 async function startServer() {
   try {

@@ -25,9 +25,11 @@ export default class BinList extends Component {
       return (
         <div>
           {e.bin ?
-            <div className='bin-full'>
-              <p className='bin-full-text'>Bin {e.bin}</p>
-            </div>
+            <Link to={`/${this.props.match.params.shelf}/${e.bin}`}>
+              <div className='bin-full'>
+                <p className='bin-full-text'>Bin {e.bin}</p>
+              </div>
+            </Link>
             :
             <div className='bin-empty'>
               <p className='bin-empty-text'>+ Add Inventory</p>
