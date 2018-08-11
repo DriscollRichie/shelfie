@@ -1,0 +1,34 @@
+#add-bin-text {
+  color: black;
+}
+
+#add-bin-nav-bar {
+  height: 70px;
+  width: 100vw;
+  background-color: #FFB8AF;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#bin-button-add {
+  background-color:#40F99B;
+  border-radius: 50px;
+  height: 70px;
+  width: 515px;
+  font-family: 'Open Sans';
+  font-size: 35px;
+  font-weight: 700;  
+  margin-top: 20px;
+}
+
+#add-bin-controls {
+  width: 515px;
+  display: flex;
+  justify-content: center;
+}

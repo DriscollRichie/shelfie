@@ -14,6 +14,9 @@ app.get('/api/:shelf/:bin/details', binsCtrl.getBinDetails)
 
 app.patch('/api/product/:product_id', binsCtrl.editProductDetails)
 
+app.post('/api/newProduct/:shelf/:bin', binsCtrl.addProduct)
+
+
 async function startServer() {
   try {
     let db = await massive(CONNECTION_STRING)

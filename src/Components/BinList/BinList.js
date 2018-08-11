@@ -23,16 +23,18 @@ export default class BinList extends Component {
     const bins = this.state.bins.map(e => {
       return (
         <div>
-          {e.bin ?
+          {e.product_name && e.product_price ?
             <Link to={`/${this.props.match.params.shelf}/${e.bin}`}>
               <div className='bin-full'>
                 <p className='bin-full-text'>Bin {e.bin}</p>
               </div>
             </Link>
             :
-            <div className='bin-empty'>
-              <p className='bin-empty-text'>+ Add Inventory</p>
-            </div>
+            <Link to={`/add/${this.props.match.params.shelf}/${e.bin}`}>
+              <div className='bin-empty'>
+                <p className='bin-empty-text'>+ Add Inventory</p>
+              </div>
+            </Link>
           }
         </div>
       )
