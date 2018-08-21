@@ -34,6 +34,17 @@ export default class BinDetails extends Component {
     }
   }
 
+  deleteBin = async () => {
+    try{
+      const {product_id} = this.state
+      const { shelf } = this.props.match.params
+      await axios.delete(`/api/deleteProduct/${product_id}`)
+      this.props.history.push(`/${shelf}`)
+    } catch(err) {
+      console.error('deleteBin function failed in BinDetails.js:', err)
+    }
+  }
+
   handleInput(key, value) {
     this.setState({ [key]: value })
   }
@@ -70,7 +81,7 @@ export default class BinDetails extends Component {
               <div id='bin-controls'>
                 {this.state.readOnly ? <button className='bin-button' onClick={() => this.setState({ readOnly: !this.state.readOnly })}>EDIT</button>
                   : <button className='bin-button-save' onClick={() => this.editBinDetails()}>SAVE</button>}
-                <button className='bin-button'>DELETE</button>
+                <button className='bin-button' onClick={() => this.deleteBin()}>DELETE</button>
               </div>
             </section>
           </div>

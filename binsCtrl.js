@@ -55,6 +55,7 @@ module.exports = {
     const db = req.app.get('db')
     const {product_id} = req.params
     await db.delete_bin({product_id})
+    res.sendStatus(200)
     } catch(err) {
       res.sendStatus(500)
       console.error('deleteBin function failed in binsCtrl.js:', err)
