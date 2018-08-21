@@ -48,5 +48,16 @@ module.exports = {
       res.sendStatus(500)
       console.error('addProduct function failed in binsCtrl.js:', err)
     }
+  },
+
+  deleteBin: async (req, res) => {
+    try {
+    const db = req.app.get('db')
+    const {product_id} = req.params
+    await db.delete_bin({product_id})
+    } catch(err) {
+      res.sendStatus(500)
+      console.error('deleteBin function failed in binsCtrl.js:', err)
+    }
   }
 }

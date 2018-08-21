@@ -16,6 +16,8 @@ app.patch('/api/product/:product_id', binsCtrl.editProductDetails)
 
 app.post('/api/newProduct/:shelf/:bin', binsCtrl.addProduct)
 
+app.delete('/api/deleteProduct/:product_id', binsCtrl.deleteBin)
+
 
 async function startServer() {
   try {
